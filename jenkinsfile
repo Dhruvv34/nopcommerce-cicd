@@ -27,7 +27,7 @@ pipeline {
             }
         }
 
-        stage('Verify Containers Running') {
+        stage('Verify Running') {
             steps {
                 echo 'CI/CD pipeline executed successfully'
                 sh 'docker ps'
