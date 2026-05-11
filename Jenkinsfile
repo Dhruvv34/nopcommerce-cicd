@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/nopSolutions/nopCommerce.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker compose build'
@@ -29,7 +23,7 @@ pipeline {
 
         stage('Verify Containers Running') {
             steps {
-                echo 'CI/CD pipeline executed successfully..'
+                echo 'CI/CD pipeline executed successfully'
                 sh 'docker ps'
             }
         }
